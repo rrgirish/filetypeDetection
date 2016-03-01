@@ -24,7 +24,7 @@ library(optimx)
 #load and preprocess training#
 # validation, and test data	 #
 ##############################
-dataset <- loadAndProcess(tnpath='train1.hist', vpath='val.hist', tspath='test.hist')
+dataset <- loadAndProcess(tnpath='train1.csv', vpath='val.csv', tspath='test.csv')
 X <- dataset[[1]]
 y <- dataset[[2]]
 Xval <- dataset[[3]]
