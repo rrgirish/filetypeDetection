@@ -24,7 +24,7 @@ library(optimx)
 #load and preprocess training#
 # validation, and test data	 #
 ##############################
-dataset <- loadAndProcess(tnpath='train1.csv', vpath='val.csv', tspath='test.csv')
+dataset <- loadAndProcess(tnpath='train.csv', vpath='val.csv', tspath='test.csv')
 X <- dataset[[1]]
 y <- dataset[[2]]
 Xval <- dataset[[3]]
@@ -110,5 +110,5 @@ print(sprintf('Testing Accuracy: %f', mean((pred == ytest)) * 100))
 
 
 #output the model
-exportNNParams(outputfile='tika.model',nn_params, 256, hidden_layer_size, 1, testcost)
+exportNNParams(outputfile='tika.model',nn_params, 256, hidden_layer_size, 1, testcost,'application/x-grib')
 

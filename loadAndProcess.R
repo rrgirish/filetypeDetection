@@ -1,8 +1,8 @@
 loadAndProcess<-function(tnpath, vpath, tspath){
 	print('Loading Dataset.....')
-	train=read.csv(file=tnpath,sep = "\t")
-	val=read.csv(file=vpath,sep="\t")
-	test=read.csv(file=tspath,sep="\t")
+	train=read.csv(file=tnpath,sep = ",")
+	val=read.csv(file=vpath,sep=",")
+	test=read.csv(file=tspath,sep=",")
 
 	m<-dim(train)[1]
 	n<-dim(train)[2]
